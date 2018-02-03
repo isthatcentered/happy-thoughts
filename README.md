@@ -2,6 +2,8 @@
 
 Make abusive comments cute by replacing specified words with a random emoji 😸
 
+(Pull Requests very welcome, let's have some fun)
+
 ## Installation
 ```shell
 $ npm install happy-thoughts --dev
