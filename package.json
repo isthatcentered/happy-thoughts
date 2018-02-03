@@ -4,11 +4,12 @@
     "description": "Filters out a list of sensitive words",
     "main": "dist/index.js",
     "scripts": {
-        "//": "Runs build on source folder change",
-        "dev": "watch 'yarn build' src",
-        "//": "Compiles files in src folder to build folder",
-        "build": "babel src -d dist",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "scripts:watch": "watch 'yarn scripts:build' src",
+        "scripts:build": "babel src -d dist",
+        "test": "jest src",
+        "test:watch": "yarn test --watch",
+        "dev": "concurrently 'yarn scripts:watch' 'yarn test:watch'",
+        "build": "yarn scripts:build"
     },
     "babel": {
         "presets": [
@@ -34,6 +35,8 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-preset-latest": "^6.24.1",
+        "concurrently": "^3.5.1",
+        "jest": "^22.1.4",
         "watch": "^1.0.2"
     }
 }
