@@ -1,6 +1,6 @@
 {
     "name": "happy-thoughts",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Make abusive comments cute by replacing specified words with a random emoji 😸",
     "main": "dist/index.js",
     "scripts": {
@@ -10,7 +10,8 @@
         "test:watch": "yarn test --watch",
         "dev": "concurrently 'yarn scripts:watch' 'yarn test:watch'",
         "build": "yarn scripts:build",
-        "prepublish": "yarn build"
+        "prepublish": "yarn build",
+        "release": "np"
     },
     "babel": {
         "presets": [
@@ -43,6 +44,7 @@
         "babel-preset-latest": "^6.24.1",
         "concurrently": "^3.5.1",
         "jest": "^22.1.4",
+        "np": "^2.18.3",
         "watch": "^1.0.2"
     }
 }
