@@ -1,12 +1,11 @@
-NPM package publish test
-https://egghead.io/lessons/javascript-set-up-compilation-of-source-code-using-babel-with-npm-scripts
-https://egghead.io/lessons/javascript-test-npm-packages-locally-in-another-project-using-npm-link
+# NPM package publish test
 
-
+## Installation
 ```shell
 $ npm install sensitive-words --dev
 ```
 
+## Usage
 ```javascript
 // Node import
 const { sensitiveWords } = require( "sensitive-words" )
