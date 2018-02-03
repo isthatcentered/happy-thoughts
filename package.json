@@ -1,7 +1,7 @@
 {
-    "name": "sensitive-words",
+    "name": "happy-thoughts",
     "version": "1.0.0",
-    "description": "Filters out a list of sensitive words",
+    "description": "Make abusive comments cute by replacing specified words with a random emoji 😸",
     "main": "dist/index.js",
     "scripts": {
         "scripts:watch": "watch 'yarn scripts:build' src",
@@ -9,7 +9,8 @@
         "test": "jest src",
         "test:watch": "yarn test --watch",
         "dev": "concurrently 'yarn scripts:watch' 'yarn test:watch'",
-        "build": "yarn scripts:build"
+        "build": "yarn scripts:build",
+        "prepublish": "yarn build"
     },
     "babel": {
         "presets": [
@@ -21,10 +22,15 @@
         "url": "git+https://github.com/isthatcentered/sensitive-words.git"
     },
     "keywords": [
+        "censor",
+        "emoji",
+        "curse",
+        "insult",
+        "abuse",
         "filter",
         "filtering",
-        "sensitive",
-        "words"
+        "happy",
+        "thoughts"
     ],
     "author": "Edouard Penin <e.peninb@gmail.com>",
     "license": "ISC",
