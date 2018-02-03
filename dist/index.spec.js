@@ -14,7 +14,15 @@ describe("Module when called", function () {
 		return expect(_typeof((0, _2.default)())).toBe("string");
 	});
 
-	it("should return a Wuuuuut", function () {
-		return expect((0, _2.default)()).toBe("Wuuuuut");
+	describe("When passed string with one blacklisted word", function () {
+		return it("should replace blacklisted word with \"***\"", function () {
+			return expect((0, _2.default)("Kill Bill", ["Bill"])).toBe("Kill ***");
+		});
+	});
+
+	describe("When passed string with multiple blacklisted words", function () {
+		return it("should replace blacklisted words with \"***\"", function () {
+			return expect((0, _2.default)("Kill Bill and Roger", ["Bill", "Roger"])).toBe("Kill *** and ***");
+		});
 	});
 });
