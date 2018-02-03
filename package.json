@@ -1,0 +1,39 @@
+{
+    "name": "sensitive-words",
+    "version": "1.0.0",
+    "description": "Filters out a list of sensitive words",
+    "main": "dist/index.js",
+    "scripts": {
+        "//": "Runs build on source folder change",
+        "dev": "watch 'yarn build' src",
+        "//": "Compiles files in src folder to build folder",
+        "build": "babel src -d dist",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "babel": {
+        "presets": [
+            "latest"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/isthatcentered/sensitive-words.git"
+    },
+    "keywords": [
+        "filter",
+        "filtering",
+        "sensitive",
+        "words"
+    ],
+    "author": "Edouard Penin <e.peninb@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/isthatcentered/sensitive-words/issues"
+    },
+    "homepage": "https://github.com/isthatcentered/sensitive-words#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-latest": "^6.24.1",
+        "watch": "^1.0.2"
+    }
+}
